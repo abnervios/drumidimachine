@@ -24,6 +24,7 @@ def pulsar(nota,vol,pul,release):
     midi_out.send_message(note_off)
     time.sleep(pul-arcis)
 
+# secuenciador, ocupa la funcion pulsar
 def sequ(nota,vel,pul,release,dur):
     #recorrido de los parametros
     notarec = 0
@@ -39,6 +40,7 @@ def sequ(nota,vel,pul,release,dur):
         pulrec += 1; pulrec = pulrec % len(pul)
         releaserec += 1; releaserec = releaserec % len(release)
 
+# ejecutar en multihilo
 def ejecutar(conjunto):
     hilos = []
     for valores in conjunto:
